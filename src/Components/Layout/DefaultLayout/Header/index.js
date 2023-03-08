@@ -9,6 +9,7 @@ import styles from './Header.module.scss'
 import images from '../../../../assets/images'
 import { Wrapper as PopperWrapper } from '../../../Popper'
 import AccountItem from '../../../AccountItem/AccountItem';
+import Button from '../../../Button';
 
 const cx = classNames.bind(styles)
 
@@ -56,6 +57,8 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('action')}>
+                    <Button text>UpLoad</Button>
+                    <Button primary>Log in</Button>
 
                 </div>
             </div>
