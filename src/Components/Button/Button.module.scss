@@ -1,4 +1,7 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
@@ -77,4 +80,15 @@
     &:hover {
         text-decoration: underline;
     }
+}
+
+.icon+.button-content,
+.button-content+.icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }

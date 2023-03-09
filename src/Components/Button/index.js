@@ -13,8 +13,10 @@ function Button(
         rounded = false,
         small = false,
         large = false,
+        leftIcon = false,
+        rightIcon = false,
         text = false,
-        className,
+        className = false,
         disable = false,
         children,
         onClick,
@@ -40,6 +42,7 @@ function Button(
     }
 
     const classes = cx('wrapper', {
+        [className]: className,
         primary,
         outline,
         rounded,
@@ -47,11 +50,15 @@ function Button(
         small,
         large,
         text,
+        leftIcon,
+        rightIcon,
 
     })
     return (
         <Comp className={classes} {...props}>
-            <span>{children}</span>
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+            <span className={cx('button-content')}>{children}</span>
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
 }
